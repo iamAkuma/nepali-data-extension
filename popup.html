@@ -2,14 +2,30 @@
 <html>
 <head>
   <title>Nepali Date Extension</title>
-  <link rel="stylesheet" type="text/css" href="popup.css">
-  <script src="popup.js"></script>
-  <script src="nepali-date-converter.js"></script>
+  <style>
+    #nepali-date {
+      font-feature-settings: "dlig" 0; /* Disable ligature */
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/nepali-date-converter/dist/nepali-date-converter.umd.js"></script>
+  <script>
+    function getNepaliDate() {
+      const today = new Date();
+      const nepaliDate = new NepaliDate(today);
+
+      const formattedDate = nepaliDate.format('dddd, DD MMMM YYYY', 'np');
+      const sanitizedDate = formattedDate.replace('२,', ','); // Remove the digit "२" followed by comma
+
+      return sanitizedDate;
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+      const nepaliDateElement = document.getElementById('nepali-date');
+      nepaliDateElement.innerText = getNepaliDate();
+    });
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1 class="heading">Date:</h1>
-    <h2 id="nepali-date"></h2>
-  </div>
+  <h1 id="nepali-date"></h1>
 </body>
 </html>
