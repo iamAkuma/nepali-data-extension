@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Nepali Date Extension",
+    "version": "1.0",
+    "description": "Displays the current Nepali date.",
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Nepali Date"
+    },
+    "permissions": ["activeTab"]
+  }
+  
