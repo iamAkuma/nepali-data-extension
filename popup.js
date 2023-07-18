@@ -1,4 +1,3 @@
-const NepaliDate = require('nepali-date-converter');
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   function convertToNepaliDate(date) {
     // Convert AD (Gregorian) date to Nepali date
-    var nepaliDate = NepaliFunctions.AD2BS(date);
+    var nepaliDate = NepaliFunctions.AD2BS(date.getFullYear(), date.getMonth() + 1, date.getDate());
   
     // Extract the Nepali year, month, and day
     var bsYear = nepaliDate.bsYear;
@@ -22,9 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
     var bsDay = nepaliDate.bsDate;
   
     // Format the Nepali date string
-    var nepaliDateStr = bsDay + " " + NepaliFunctions.getFullMonth(bsMonth) + " " + bsYear;
+    var nepaliDateStr = bsDay + " " + getNepaliMonthName(bsMonth) + " " + bsYear;
   
     // Return the converted Nepali date
     return nepaliDateStr;
+  }
+  
+  function getNepaliMonthName(month) {
+    var nepaliMonths = [
+      "Baishakh", "Jestha", "Ashadh", "Shrawan",
+      "Bhadra", "Ashwin", "Kartik", "Mangsir",
+      "Poush", "Magh", "Falgun", "Chaitra"
+    ];
+  
+    return nepaliMonths[month - 1];
   }
   
