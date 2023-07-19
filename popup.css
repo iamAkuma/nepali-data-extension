@@ -1,0 +1,6 @@
+/* styles.css */
+#nepali-date {
+    font-feature-settings: "dlig" 0; /* Disable ligature */
+    font-family: Arial, sans-serif; /* Use a font that supports Nepali digits */
+  }
+  
