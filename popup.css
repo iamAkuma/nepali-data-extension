@@ -1,6 +1,30 @@
 /* styles.css */
-#nepali-date {
-    font-feature-settings: "dlig" 0; /* Disable ligature */
-    font-family: Arial, sans-serif; /* Use a font that supports Nepali digits */
+body {
+    margin: 0;
+    padding: 1px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
   }
   
+  #nepali-date-container {
+    font-feature-settings: "dlig" 0; /* Disable ligature */
+    font-family: Arial, sans-serif; /* Use a font that supports Nepali digits */
+    font-size: 24px;
+    background-color: #3366cc;
+    color: #fff;
+    white-space: nowrap; /* Keep the text in a single line */
+    /* Set a maximum width for the container */
+    display: inline-block; 
+    font-weight: bold;
+  }
+  h6 {
+    margin: 0;
+    text-align: right;
+    font-size: 8px;
+    color: #666;
+    margin-top: 15px; /* Add margin to move the h6 element down */
+
+  }
