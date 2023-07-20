@@ -28,3 +28,5 @@ P.S: Pin the extension in your browser for efficient use of the extension and to
 
 Please note that the steps may vary slightly between different browsers or versions.
 </h5>
+
+<h5> CDN taken from https://github.com/subeshb1/Nepali-Date </h5>
