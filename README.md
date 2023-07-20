@@ -3,7 +3,10 @@
 
 <h5>
   To add this extension to your own browser, here are some of the steps to follow:
+  
 To load and test your extension locally in your browser, you can follow these steps:
+
+  First of all download the extension with this link `https://github.com/iamAkuma/nepali-date-extension/archive/refs/heads/main.zip`
 
 1. Open your browser and go to the extensions management page:
    - For Chrome: Enter `chrome://extensions` in the address bar.
