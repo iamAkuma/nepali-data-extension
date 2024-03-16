@@ -1,3 +1,4 @@
+Description : Show Nepali Date in your browser extension
 <h2>Nepali Date Extension</h2>
 
 
